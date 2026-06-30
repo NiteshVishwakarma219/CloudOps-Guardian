@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://13.201.132.138:8000";
 
 async function fetchData(endpoint) {
     try {
