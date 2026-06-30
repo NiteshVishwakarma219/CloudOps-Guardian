@@ -31,8 +31,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://127.0.0.1:3000",
-        "http://localhost:3000",
+        "http://cloudops-guardian-ui.s3-website.ap-south-1.amazonaws.com",
         "http://127.0.0.1:5500",
         "http://localhost:5500"
     ],
