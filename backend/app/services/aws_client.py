@@ -1,12 +1,19 @@
 import boto3
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+from app.core.config import settings
 
-AWS_REGION = os.getenv("AWS_REGION", "ap-south-1")
+session = boto3.Session(
 
-ec2_client = boto3.client(
-    "ec2",
-    region_name=AWS_REGION
+    region_name=settings.AWS_REGION
+
 )
+
+ec2_client = session.client("ec2")
+
+s3_client = session.client("s3")
+
+iam_client = session.client("iam")
+
+cloudtrail_client = session.client("cloudtrail")
+
+sts_client = session.client("sts")

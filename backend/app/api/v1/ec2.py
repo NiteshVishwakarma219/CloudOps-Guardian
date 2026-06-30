@@ -47,3 +47,11 @@ def get_ec2_instances():
             "message": str(e)
 
         }
+    
+router = APIRouter(
+
+    prefix="/api/v1",
+
+    tags=["EC2"]
+
+)
