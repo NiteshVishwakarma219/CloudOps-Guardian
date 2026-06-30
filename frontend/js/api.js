@@ -4,15 +4,15 @@ async function fetchData(endpoint) {
     try {
         const response = await fetch(`${BASE_URL}${endpoint}`);
 
-        if (!response.ok) {
-            throw new Error("API Error");
-        }
+        console.log("STATUS:", response.status);
 
-        return await response.json();
+        const data = await response.json();
+        console.log("API DATA:", data);
+
+        return data;
 
     } catch (error) {
-        showToast("⚠️ Failed to load data from server");
-        console.error(error);
+        console.error("FETCH ERROR:", error);
 
         return {
             error: true
