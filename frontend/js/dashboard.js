@@ -2,16 +2,19 @@ async function loadDashboard() {
     const data = await fetchData("/dashboard");
 
     document.getElementById("stats").innerHTML = `
-        <h3>Total EC2: ${data.ec2_total}</h3>
-        <h3>Running: ${data.ec2_running}</h3>
-        <h3>Stopped: ${data.ec2_stopped}</h3>
-        <h3>S3 Buckets: ${data.s3_total}</h3>
-        <h3>Estimated Savings: $${data.savings}</h3>
-        console.log(data);
+        <h3>Total EC2: ${data.EC2}</h3>
+        <h3>S3 Buckets: ${data.S3}</h3>
+        <h3>VPCs: ${data.VPC}</h3>
+        <h3>Security Groups: ${data.SecurityGroups}</h3>
+        <h3>Volumes: ${data.Volumes}</h3>
+        <h3>Snapshots: ${data.Snapshots}</h3>
+        <h3>Elastic IPs: ${data.ElasticIPs}</h3>
     `;
 }
 
 loadDashboard();
+
+
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
 
