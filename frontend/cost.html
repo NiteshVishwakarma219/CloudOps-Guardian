@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cost Optimization</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>CloudOps</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="security.html">Security</a>
+  <a href="cost.html">Cost Optimization</a>
+  <a href="drift.html">Drift Detection</a>
+</div>
+
+<div class="main">
+
+  <h1>💰 Cost Optimization</h1>
+
+  <div class="cards" id="costCards"></div>
+
+  <h2>📉 Savings Breakdown</h2>
+  <canvas id="savingsChart" width="400" height="200"></canvas>
+
+  <h2>🧹 Idle Resources</h2>
+  <div id="idleResources"></div>
+<button onclick="toggleDarkMode()">🌙 Toggle Theme</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

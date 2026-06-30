@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>CloudOps</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="security.html">Security</a>
+  <a href="cost.html">Cost Optimization</a>
+  <a href="drift.html">Drift Detection</a>
+  <button onclick="toggleDarkMode()">🌙 Toggle Theme</button>
+</div>
+
+<div class="main">
+
+  <h1>🔐 Security Overview</h1>
+
+  <div class="cards" id="securityCards"></div>
+
+  <h2>Risky Resources</h2>
+  <div id="riskList"></div>
+
+</div>
+
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
